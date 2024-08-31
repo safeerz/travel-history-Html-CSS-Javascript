@@ -1,0 +1,153 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Aesthetic Background */
+body {
+    background: linear-gradient(135deg, #ff9a9e, #98523f);
+    background-image: url('https://www.transparenttextures.com/patterns/geometry.png');
+    background-blend-mode: overlay;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Gallery Container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    justify-content: center;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover img {
+    opacity: 0.8;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.image-container:hover .caption {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+.logo-button {
+    position: fixed;
+    top: 20px; /* Adjust if needed */
+    left: 20px; /* Adjust if needed */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.logo-button img {
+    width: 60px; /* Adjust the width to make the button smaller */
+    height: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between images */
+    padding: 60px 20px 20px 60px; /* Adjust padding to ensure space for button */
+}
+
+.image-container {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust percentage and margin for responsive layout */
+    box-sizing: border-box;
+}
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100%;
+    overflow-y: scroll; /* Make the content scrollable */
+}
+
+
+
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer; /* Makes the modal background clickable */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    cursor: default; /* Prevents cursor change when hovering over image */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
